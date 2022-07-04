@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library Management System</title>
+    <!-- Bootstraps CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container my-4">
+        <h1>My Library</h1>
+        <hr>
+        <form id="libraryForm">
+            <div class="row mb-3">
+                <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bookName" placeholder="Book Name" autocomplete="off">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="author" placeholder="Author" autocomplete="off">
+                </div>
+            </div>
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-4">Type</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="type" id="fiction" value="Fiction" checked>
+                        <label class="form-check-label" for="fiction">
+                            Fiction
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="type" id="programming" value="Programming">
+                        <label class="form-check-label" for="programming">
+                            Programming
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="type" id="cooking" value="Cooking">
+                        <label class="form-check-label" for="cooking">
+                            Cooking
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+        <br>
+
+        <div id="table">
+            <h1>Your Books</h1>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Type</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstraps JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- My JS File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
